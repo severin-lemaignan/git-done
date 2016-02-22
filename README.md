@@ -14,7 +14,7 @@ Sample output
 -------------
 
 ```
-$ git-done 2016-01-15
+$ git-done last week
 
 Git activity on the 2016-01-15:
 debian-packages:
@@ -35,8 +35,11 @@ Usage
 -----
 
 ```sh
-$ ./git-done <from date, eg 2016-01-18>
+$ ./git-done <starting date>
 ```
+
+The starting date can be anything that GNU `date` can interpret: for instance,
+`last week`, `yesterday`, `2016-01-12`,  `a month ago` all work.
 
 If you want to post the summaries to IDoneThis, simply fill in the `api_token`
 and `team_name` variables at the top of the script.

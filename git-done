@@ -77,11 +77,13 @@ DONE
 ################### IDONETHIS
 
 if [[ -z $1 ]]; then
-    echo "You must provide a start date, eg '$0 2015-01-18'"
+    echo "You must provide a start date, eg '$0 2015-01-18' or '$0 last week'"
     exit -1
 fi
 
-d=$(date -I -d "$1") || exit -1
+startdate="$@"
+
+d=$(date -I -d "$startdate") || exit -1
 enddate=$(date -I)
 
 topdir=
