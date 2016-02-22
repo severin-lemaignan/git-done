@@ -1,20 +1,11 @@
 I Git This
 ==========
 
-Ask Git to tell you what you've been busy with!
-
-This small shell script (bash) does the following:
-
-- for every day:
-    - iterate over all your git repositories in your `$HOME`
-    - count how many commits you did that day (on any branch)
-    - (optionally) send the summary to your [IDoneThis](https://idonethis.com) account
-
-Sample output
--------------
+What (Git-managed) projects/code/document have you been working on since a month
+ago? Just ask!
 
 ```
-$ git-done last week
+$ git-done a month ago
 
 Git activity on the 2016-01-15:
 debian-packages:
@@ -29,7 +20,45 @@ debian-packages:
 
 Git activity on the 2016-01-17:
 None
+
+[...]
 ```
+
+And last week?
+
+```
+$ git-done last week
+
+Git activity on the 2016-02-15:
+publications:
+-- 11 commits in icra-2016-cellulo-localization
+
+Git activity on the 2016-02-16:
+publications:
+-- 3 commits in icra-2016-cellulo-localization
+src:
+-- 3 commits in attention_tracker
+
+Git activity on the 2016-02-17:
+src:
+-- 3 commits in academia-website
+-- 3 commits in rpi-config
+
+Git activity on the 2016-02-18:
+None
+
+[...]
+```
+
+Magic!
+
+
+This small shell script (bash) does the following:
+
+- for every day since the provided starting date:
+    - iterate over all your git repositories in your `$HOME`
+    - count how many commits you did that day (on any branch)
+    - (optionally) send the summary to your [IDoneThis](https://idonethis.com) account
 
 Usage
 -----
