@@ -94,8 +94,7 @@ while [ "$d" != "$enddate" ]; do
     for line in $(find $HOME -name ".git" -type d);do
         path=$(dirname $line)
         cd $path
-        nbcommit=$(git shortlog HEAD -s -n --author="$(git config user.name)" --all --since="$d 00:00" --until="$d 23:59" | awk '{print $1}')
-
+        nbcommit=$(git shortlog HEAD -s -n --author="$(git config user.name)" --all --since="$d 00:00" --until="$d 23:59" 2>&1 | awk '/[0-9]+/ {print $1}')
 
         if [ ! -z $nbcommit ]
         then
