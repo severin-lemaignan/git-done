@@ -1,11 +1,11 @@
 I Git This
 ==========
 
-What (Git-managed) projects/code/document have you been working on since a month
-ago? Just ask!
+What (Git-managed) projects/code/document have you been working on since a
+month? Just ask!
 
 ```
-$ git-done a month ago
+$ git-done last month
 
 Git activity on the 2016-01-15:
 debian-packages:
@@ -24,10 +24,10 @@ None
 [...]
 ```
 
-And last week?
+And yesterday?
 
 ```
-$ git-done last week
+$ git-done yesterday
 
 Git activity on the 2016-02-15:
 publications:
