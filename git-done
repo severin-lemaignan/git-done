@@ -83,6 +83,17 @@ fi
 
 startdate="$@"
 
+if [[ $OSTYPE == darwin* ]]; then
+    ##check if gdate available (standard date command on unix doesn't allow 'yesterday' etc.)
+    command -v gdate >/dev/null 2>&1 
+    if [ $? != 0 ]; then
+        echo "Please install gdate from coreutils" >&2
+        exit -1
+    fi
+    alias date=gdate
+    shopt -s expand_aliases
+fi
+
 d=$(date -I -d "$startdate") || exit -1
 enddate=$(date -I)
 

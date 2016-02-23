@@ -76,3 +76,10 @@ and `team_name` variables at the top of the script.
 *The script does not yet check if you have already posted a summary for the
 given days: if you run the script several times, summaries will be posted
 several times! PR welcome :-)*
+
+Dependencies
+------------
+For OS X users, please install `coreutilities` to be able to use GNU `date`.
+```
+homebrew install coreutilities
+```
